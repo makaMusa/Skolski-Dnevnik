@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Skolski Dnevnik</string>
+
+    <string-array name="subjects">
+        <item>Matematika</item>
+        <item>Hrvatski</item>
+        <item>Engleski</item>
+        <item>Informatika</item>
+        <item>Povijest</item>
+        <item>Zemljopis</item>
+        <item>Biologija</item>
+        <item>Fizika</item>
+        <item>Kemija</item>
+        <item>Tjelesno</item>
+    </string-array>
+
+    <string name="title_activity_user_info">UserInfo</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_predmet_ocjene">PredmetOcjene</string>
+    <string name="title_activity_login">Login</string>
+    <string name="login_username">Korisničko ime</string>
+    <string name="login_password">Lozinka</string>
+    <string name="login_bBack">Odustani</string>
+    <string name="login_bLogin">Prijavi Se</string>
+    <string name="SubjectList_bAccept">Potvrdi</string>
+    <string name="ponovi_novu_sifru">Ponovi novu sifru</string>
+    <string name="unesi_novu_sifru">Unesi novu sifru</string>
+    <string name="unesi_staru_sifru">Unesi staru sifru</string>
+    <string name="promjenichangepass">Promjeni</string>
+    <string name="imechangeinfo">Ime</string>
+    <string name="prezimechangeinfo">Prezime</string>
+    <string name="changeinfobirth_date">Birth Date</string>
+    <string name="a_urirajchangeinfo">Ažuriraj</string>
+    <string name="avatar_changeinfo">Avatar(ostavi prazno ako ne zelis mjenjati)</string>
+    <string name="hrvatskichangeinfo">Hrvatski</string>
+    <string name="vasi_ucenicichangeinfo">Vasi Ucenici</string>
+    <string name="odabir_ucenikachangeinfo">Odabir ucenika</string>
+</resources>

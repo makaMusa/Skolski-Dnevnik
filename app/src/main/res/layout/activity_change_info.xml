@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ADD8E6"
+    tools:context="com.example.sviostali.sk_dnevnik.Activities.ChangeInfo">
+
+
+    <EditText
+        android:id="@+id/etCILastname"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etCIname"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/cardview_light_background"
+        android:textAlignment="center"
+        android:ems="10"
+        android:hint="@string/prezimechangeinfo"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etCIDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etCIAvatar"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etCIDate"
+        android:textColor="@color/cardview_light_background"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="Avatar(url)"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btnCIchange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etCIDate"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etCILastname"
+        android:textColor="@color/cardview_light_background"
+        android:textAlignment="center"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="@string/changeinfobirth_date"
+        android:inputType="datetime"
+        app:layout_constraintBottom_toTopOf="@+id/etCIAvatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etCIname"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/cardview_light_background"
+        android:textAlignment="center"
+        android:ems="10"
+        android:hint="@string/imechangeinfo"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etCILastname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.809" />
+
+    <Button
+        android:id="@+id/btnCIchange"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etCIDate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="256dp"
+        android:backgroundTint="#FFFF"
+        android:shadowColor="@color/design_default_color_primary"
+        android:text="@string/a_urirajchangeinfo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

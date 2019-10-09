@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sviostali.sk_dnevnik">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="DATABASE"
+            android:value="mydb.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="12" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="com.example.sviostali.sk_dnevnik" />
+        <activity
+            android:name="com.example.sviostali.sk_dnevnik.Activities.UserInfo"
+            android:label="@string/title_activity_user_info"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.sviostali.sk_dnevnik.Activities.Login"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.sviostali.sk_dnevnik.Activities.Register" />
+        <activity android:name="com.example.sviostali.sk_dnevnik.Activities.SubjectListActivity" />
+        <activity android:name="com.example.sviostali.sk_dnevnik.Activities.SelectedSubjectsActivity" />
+        <activity android:name="com.example.sviostali.sk_dnevnik.Activities.ChangeInfo" />
+        <activity android:name="com.example.sviostali.sk_dnevnik.Activities.SelectStudentsForSubjects" />
+        <activity android:name="com.example.sviostali.sk_dnevnik.Activities.SelectedSubject" />
+        <activity android:name="com.example.sviostali.sk_dnevnik.Activities.SelectedStudentsActivity" />
+        <activity android:name="com.example.sviostali.sk_dnevnik.Activities.StudentReview" />
+        <activity android:name="com.example.sviostali.sk_dnevnik.Activities.StudentsSubjects" />
+        <activity android:name="com.example.sviostali.sk_dnevnik.Activities.StudentMarks" />
+        <activity android:name="com.example.sviostali.sk_dnevnik.Activities.ChangePassword"></activity>
+    </application>
+
+</manifest>
