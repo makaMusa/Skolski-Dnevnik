@@ -50,7 +50,7 @@ public class SelectedSubjectListAdapter extends BaseAdapter {
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View row = layoutInflater.inflate(R.layout.selected_subject_list, viewGroup, false);
 
-        TextView subject = (TextView) row.findViewById(R.id.tvSelectedSubject);
+        TextView subject = row.findViewById(R.id.tvSelectedSubject);
 
         sub = list.get(position);
         subject.setText(sub.getName());

@@ -13,10 +13,6 @@ import com.example.sviostali.sk_dnevnik.sugarclasses.usersugar;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Isao kao druga 2 adaptera za prikaz
- */
-
 public class UserListAdapter extends BaseAdapter{
     public List<String> list;
     public List<UserList> userList;
@@ -25,8 +21,8 @@ public class UserListAdapter extends BaseAdapter{
 
     public UserListAdapter(Context c){
         context = c;
-        userList = new ArrayList<UserList>();
-        userSList = new ArrayList<usersugar>();
+        userList = new ArrayList<>();
+        userSList = new ArrayList<>();
 
         List<usersugar> allUsers = usersugar.listAll(usersugar.class);
 
@@ -62,8 +58,8 @@ public class UserListAdapter extends BaseAdapter{
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View row = layoutInflater.inflate(R.layout.subject_list, viewGroup, false);
 
-        TextView user = (TextView) row.findViewById(R.id.tvSubject);
-        CheckBox isMarked = (CheckBox) row.findViewById(R.id.cbIsMarked);
+        TextView user = row.findViewById(R.id.tvSubject);
+        CheckBox isMarked = row.findViewById(R.id.cbIsMarked);
 
         final UserList temp = userList.get(position);
 

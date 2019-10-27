@@ -27,8 +27,8 @@ public class SubjectListActivity extends AppCompatActivity {
 
         subjectListAdapter = new SubjectListAdapter(getApplicationContext());
 
-        bAccept = (Button) findViewById(R.id.bAccept);
-        lvSubjects = (ListView) findViewById(R.id.lvSubjects);
+        bAccept = findViewById(R.id.bAccept);
+        lvSubjects = findViewById(R.id.lvSubjects);
         lvSubjects.setAdapter(subjectListAdapter);
 
         bAccept.setOnClickListener(new View.OnClickListener() {
@@ -44,8 +44,6 @@ public class SubjectListActivity extends AppCompatActivity {
                     if(sl.isMarked()){
                         List<subjects> allSubjects = subjects.listAll(subjects.class);
 
-                        //Provjerava da li postoji jos ijedan predmet-profesor par u bazi podataka
-                        //Ako postoji, da taj profesor ne moze predavat isti predmet 2 puta
                         int check=0;
                         for(int i=0; i<allSubjects.size(); i++){
                             String a = allSubjects.get(i).getName();

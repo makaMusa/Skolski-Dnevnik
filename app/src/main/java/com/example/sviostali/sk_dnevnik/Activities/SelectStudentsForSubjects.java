@@ -11,7 +11,6 @@ import com.example.sviostali.sk_dnevnik.sugarclasses.studentsubject;
 import com.example.sviostali.sk_dnevnik.sugarclasses.subjects;
 import com.example.sviostali.sk_dnevnik.sugarclasses.usersugar;
 import com.orm.SugarContext;
-
 import java.util.List;
 
 public class SelectStudentsForSubjects extends AppCompatActivity {
@@ -26,12 +25,12 @@ public class SelectStudentsForSubjects extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SugarContext.init(this);
-        setContentView(R.layout.activity_subject_list); // Koristim isti layout za ovo jer nema potrebe za novim
+        setContentView(R.layout.activity_subject_list);
 
         userListAdapter = new UserListAdapter(getApplicationContext());
 
-        bAccept = (Button) findViewById(R.id.bAccept);
-        lvStudents = (ListView) findViewById(R.id.lvSubjects); // zove se lvStudents radi olaksanja pri pisanju
+        bAccept = findViewById(R.id.bAccept);
+        lvStudents = findViewById(R.id.lvSubjects);
         lvStudents.setAdapter(userListAdapter);
 
         Bundle s = getIntent().getExtras();
@@ -47,10 +46,8 @@ public class SelectStudentsForSubjects extends AppCompatActivity {
                 for(int i=0;i<userListAdapter.getUserList().size();i++){
 
                     if(userListAdapter.getUserList().get(i).isMarked()){
-
                         List<studentsubject> allStudentSubject = studentsubject.listAll(studentsubject.class);
-                        //Provjera da li vec postoji predmet-ucenik par u bazi, ako postoji da ne dodaje ponovo
-                        //npr da stipe ne moze imat 2 engleska kao predmete
+
                         int check=0;
                         for(int j=0; j<allStudentSubject.size(); j++){
                             String a = allStudentSubject.get(j).getSubject().getName();

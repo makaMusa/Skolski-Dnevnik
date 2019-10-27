@@ -22,8 +22,7 @@ public class SelectedStudentsActivity extends AppCompatActivity {
         id = s.getLong("id");
         SStudent = new SelectedStudentsAdapter(this, id);
 
-        lvSelectedStudents = (ListView) findViewById(R.id.lvSelectedStudents);
+        lvSelectedStudents = findViewById(R.id.lvSelectedStudents);
         lvSelectedStudents.setAdapter(SStudent);
-
     }
 }

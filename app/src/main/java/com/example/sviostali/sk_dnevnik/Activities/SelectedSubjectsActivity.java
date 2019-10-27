@@ -23,7 +23,7 @@ public class SelectedSubjectsActivity extends AppCompatActivity {
         id = s.getInt("id");
         SSAdapter = new SelectedSubjectListAdapter(getApplicationContext(), id);
 
-        lvSSubjects = (ListView) findViewById(R.id.lvSelectedSubjects);
+        lvSSubjects = findViewById(R.id.lvSelectedSubjects);
         lvSSubjects.setAdapter(SSAdapter);
     }
 }

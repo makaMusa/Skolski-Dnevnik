@@ -18,7 +18,6 @@ import com.example.sviostali.sk_dnevnik.R;
 import com.example.sviostali.sk_dnevnik.sugarclasses.marks;
 import com.example.sviostali.sk_dnevnik.sugarclasses.studentsubject;
 import com.orm.SugarContext;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
@@ -80,14 +79,12 @@ public class StudentReview extends AppCompatActivity {
         }
         getAverage();
 
-
-
         //unos ocijene
         btnSetMark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 builder = new AlertDialog.Builder(StudentReview.this);
-                builder.setTitle("Ocijena:");
+                builder.setTitle("Ocjena:");
                 final EditText input = new EditText(StudentReview.this);
                 input.setInputType(InputType.TYPE_CLASS_NUMBER);
                 builder.setView(input);
@@ -95,13 +92,13 @@ public class StudentReview extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         setMark = Integer.parseInt(input.getText().toString());
-                        if(setMark<0||setMark>5){
+                        if(setMark<1||setMark>5){
                             Toast.makeText(StudentReview.this, "Unesite ocjenu u rasponu 1-5", Toast.LENGTH_SHORT).show();
                         }else{
                             Calendar c = Calendar.getInstance();
                             SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
                             String strDate = sdf.format(c.getTime());
-                            Toast.makeText(StudentReview.this, "Ocijenili ste s ocjenom: "+setMark, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(StudentReview.this, "Ocjenili ste s ocjenom: "+setMark, Toast.LENGTH_SHORT).show();
                             mark = new marks(stud_sub, setMark, strDate, 0);
                             mark.save();
                             getAverage();
@@ -198,7 +195,7 @@ public class StudentReview extends AppCompatActivity {
         List<marks> list = stud_sub.getMarks();
         sum=0;
         if(list.isEmpty()){
-            tvAverage.setText("0");
+            tvAverage.setText("Trebate više ocjena za računanje prosjeka.");
         }else{
             for(int i = 0;i<list.size();i++){
                 sum+=list.get(i).getMark();

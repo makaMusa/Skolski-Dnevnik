@@ -18,7 +18,7 @@ public class StudentsSubjects extends AppCompatActivity {
 
         Bundle s = getIntent().getExtras();
         id = s.getInt("id");
-        lvStudentsSubjets = (ListView) findViewById(R.id.lvStudentsSubjects);
+        lvStudentsSubjets = findViewById(R.id.lvStudentsSubjects);
         SSadapter = new StudentsSubjectAdapter(this,id);
         lvStudentsSubjets.setAdapter(SSadapter);
     }

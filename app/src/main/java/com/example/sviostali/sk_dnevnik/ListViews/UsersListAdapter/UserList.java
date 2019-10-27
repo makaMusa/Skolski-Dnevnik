@@ -4,8 +4,8 @@ public class UserList {
     public String user;
     public boolean isMarked;
 
-    UserList(String footballClub){
-        this.user = footballClub;
+    UserList(String userr){
+        this.user = userr;
         this.isMarked = false;
     }
 

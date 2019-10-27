@@ -26,7 +26,7 @@ public class SubjectListAdapter extends BaseAdapter {
         Resources res = context.getResources();
         String[] subjects = res.getStringArray(R.array.subjects);
 
-        subjectList = new ArrayList<SubjectList>();
+        subjectList = new ArrayList<>();
 
         for(int i = 0;i < list.size();i++){
             subjectList.add(new SubjectList(subjects[i]));
@@ -53,8 +53,8 @@ public class SubjectListAdapter extends BaseAdapter {
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View row = layoutInflater.inflate(R.layout.subject_list, viewGroup, false);
 
-        TextView subject = (TextView) row.findViewById(R.id.tvSubject);
-        CheckBox isMarked = (CheckBox) row.findViewById(R.id.cbIsMarked);
+        TextView subject = row.findViewById(R.id.tvSubject);
+        CheckBox isMarked = row.findViewById(R.id.cbIsMarked);
 
         final SubjectList temp = subjectList.get(position);
 

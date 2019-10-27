@@ -45,11 +45,6 @@ public class Login extends AppCompatActivity {
             editor.commit();
         }
 
-        /**
-         * 3 onclicklistenera, login posalje samo username pa sam mislio napravit da userinfo prihvati username,
-         * pretrazi bazu i zatim ispise podatke ovisno o tome da li se radi o profesoru ili uceniku
-         * **/
-
         btnLBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

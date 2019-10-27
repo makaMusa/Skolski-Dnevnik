@@ -51,7 +51,7 @@ public class SelectedStudentsAdapter extends BaseAdapter {
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View row = layoutInflater.inflate(R.layout.selected_subject_list, viewGroup, false);
 
-        TextView tvStudent = (TextView) row.findViewById(R.id.tvSelectedSubject);
+        TextView tvStudent = row.findViewById(R.id.tvSelectedSubject);
         stud_sub = list.get(position);
         student = stud_sub.getUser();
         tvStudent.setText(student.getLogin());

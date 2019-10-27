@@ -9,12 +9,7 @@ import android.widget.TextView;
 import com.example.sviostali.sk_dnevnik.R;
 import com.example.sviostali.sk_dnevnik.sugarclasses.marks;
 import com.example.sviostali.sk_dnevnik.sugarclasses.studentsubject;
-
 import java.util.List;
-
-/**
- * Created by svi ostali on 18.6.2017..
- */
 
 public class MarksAdapter2 extends BaseAdapter{
 
@@ -52,8 +47,8 @@ public class MarksAdapter2 extends BaseAdapter{
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View row = layoutInflater.inflate(R.layout.marks_list, viewGroup, false);
 
-        TextView tvDate = (TextView) row.findViewById(R.id.tvMLdate);
-        TextView tvMark = (TextView) row.findViewById(R.id.tvMLmark);
+        TextView tvDate = row.findViewById(R.id.tvMLdate);
+        TextView tvMark = row.findViewById(R.id.tvMLmark);
         mark = list.get(position);
 
         tvDate.setText(mark.getDate());

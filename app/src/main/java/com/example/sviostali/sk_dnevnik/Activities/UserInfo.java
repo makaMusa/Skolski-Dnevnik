@@ -2,24 +2,19 @@ package com.example.sviostali.sk_dnevnik.Activities;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.sviostali.sk_dnevnik.R;
@@ -30,7 +25,6 @@ import com.orm.SugarContext;
 public class UserInfo extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    // tvui1,itd radi lakseg gledanja, avatar isto tako
     Button btnUI1, btnUI2;
     TextView tvUI1, tvUI2, tvUI3, tvUI4, tvDrawer;
     ImageView avatar;
@@ -54,8 +48,6 @@ public class UserInfo extends AppCompatActivity
         btnUI1 = findViewById(R.id.btnUI1);
         btnUI2 = findViewById(R.id.btnUI2);
 
-
-        /** Iz bundlea uzme username, i u showdata provjeri username i pokupi ostale podatke da ih moze koristiti*/
         Bundle s = getIntent().getExtras();
 
         id = s.getInt("id");
@@ -138,9 +130,9 @@ public class UserInfo extends AppCompatActivity
         avatarurl = user.getAvatar();
 
         tvUI4.setText(user.getBirthdate());
-        if (user.getProfessor() == 1) { //Gornje za profesore, donje za studente
+        if (user.getProfessor() == 1) {
 
-            btnUI1.setText("Vaši predmeti");// dodat onclicklistenere za sva 4 kad napravimo predmete i ocjene itd
+            btnUI1.setText("Vaši predmeti");
             btnUI2.setText("Dodavanje predmeta");
 
             btnUI1.setOnClickListener(new View.OnClickListener() {

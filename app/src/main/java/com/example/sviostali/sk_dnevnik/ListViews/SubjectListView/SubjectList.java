@@ -4,8 +4,8 @@ public class SubjectList {
     public String subject;
     public boolean isMarked;
 
-    SubjectList(String footballClub){
-        this.subject = footballClub;
+    SubjectList(String subjectt){
+        this.subject = subjectt;
         this.isMarked = false;
     }
 

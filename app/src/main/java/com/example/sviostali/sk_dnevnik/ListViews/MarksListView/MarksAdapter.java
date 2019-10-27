@@ -52,8 +52,8 @@ public class MarksAdapter extends BaseAdapter {
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View row = layoutInflater.inflate(R.layout.marks_list, viewGroup, false);
 
-        TextView tvDate = (TextView) row.findViewById(R.id.tvMLdate);
-        TextView tvMark = (TextView) row.findViewById(R.id.tvMLmark);
+        TextView tvDate = row.findViewById(R.id.tvMLdate);
+        TextView tvMark = row.findViewById(R.id.tvMLmark);
         mark = list.get(position);
         final marks tmpmarks = mark;
 

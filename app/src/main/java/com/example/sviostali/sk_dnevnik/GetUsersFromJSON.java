@@ -1,7 +1,6 @@
 package com.example.sviostali.sk_dnevnik;
 
 import android.content.Context;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;

@@ -48,7 +48,7 @@ public class StudentsSubjectAdapter extends BaseAdapter {
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View row = layoutInflater.inflate(R.layout.selected_subject_list, viewGroup, false);
 
-        TextView tvSubject = (TextView) row.findViewById(R.id.tvSelectedSubject);
+        TextView tvSubject = row.findViewById(R.id.tvSelectedSubject);
 
         sub = list.get(position).getSubject();
 

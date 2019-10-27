@@ -9,8 +9,6 @@ import android.widget.TextView;
 import com.example.sviostali.sk_dnevnik.R;
 import com.example.sviostali.sk_dnevnik.sugarclasses.subjects;
 
-// Jedan predmet, 2 buttona a drugi button otvara odabir ucenika
-
 public class SelectedSubject extends AppCompatActivity {
     public TextView tvSSImePredmeta;
     public Button btnSS1, btnSS2;
@@ -25,9 +23,9 @@ public class SelectedSubject extends AppCompatActivity {
         Bundle s = getIntent().getExtras();
         id = s.getLong("id");
 
-        tvSSImePredmeta = (TextView) findViewById(R.id.tvSSImePredmeta);
-        btnSS1 = (Button) findViewById(R.id.btnSS1);
-        btnSS2 = (Button) findViewById(R.id.btnSS2);
+        tvSSImePredmeta = findViewById(R.id.tvSSImePredmeta);
+        btnSS1 = findViewById(R.id.btnSS1);
+        btnSS2 = findViewById(R.id.btnSS2);
         sub = subjects.findById(subjects.class,id);
 
         tvSSImePredmeta.setText(sub.getName());
