@@ -121,7 +121,7 @@
             android:layout_weight="1"
             android:backgroundTint="#FFF"
             android:elevation="8dp"
-            android:text="Ocijeni"
+            android:text="Ocjeni"
             android:textColor="#000" />
 
         <Button
